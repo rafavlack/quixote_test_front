@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quixote AI Wrapper - Frontend Dashboard
 
-## Getting Started
+This is the frontend application for the Quixote AI Wrapper assessment. It provides a real-time dashboard to monitor AI token usage, billing, and API performance.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS
+- **State Management & Data Fetching**: React Query (TanStack Query)
+- **Authentication**: Supabase Auth
+- **Visualizations**: Recharts
+- **Icons**: Lucide React
+- **HTTP Client**: Axios (with JWT Interceptors)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Features Implemented
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Secure Authentication Flow
+- Integrates with **Supabase Auth** for secure user login.
+- Custom middleware/guard to protect the `/dashboard` route.
+- Persistent sessions using standard JWT handling.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Real-time Dashboard
+- **Usage Area Chart**: Beautiful visualization of token consumption over time using `AreaChart` with smooth gradients.
+- **Billing Summary**: Clear display of total tokens used and an estimated "Current Bill" in USD ($0.02 per 1k tokens).
+- **Recent Activity**: A live list of the latest 3 AI interactions logged in the database.
 
-## Learn More
+### 3. Smart Data Management
+- **React Query Integration**: Ensures data is fresh, cached efficiently, and provides a smooth loading experience with optimized re-fetching.
+- **Axios Interceptors**: Automatically attaches the Supabase `access_token` to every request sent to the Backend API.
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Desktop-Ready Architecture (Tauri Bonus)
+- Built using **Static Site Generation (SSG)** compatibility.
+- The project is structured to be easily ported to a **Tauri** environment by switching to `output: 'export'` in `next.config.js`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏃 How to Run Locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
+- Node.js (v18+)
+- Backend API running on `http://localhost:3000`
 
-## Deploy on Vercel
+### Setup
+1. Navigate to the frontend directory:
+   ```bash
+   cd d:\REPO\quixote_test_front
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Configure environment variables in `.env.local`:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+   NEXT_PUBLIC_API_URL=http://localhost:3000
+   ```
+4. Run the development server:
+   ```bash
+   npm run dev -- -p 3001
+   ```
+5. Open [http://localhost:3001](http://localhost:3001) in your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📸 Integration Evidence
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Screenshots and visual proofs can be found in the `assets/test-evidence` directory (in the main repository).
+
+---
+*Developed as part of the Quixote Full-Stack Technical Assessment.*
