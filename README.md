@@ -39,9 +39,10 @@ This is the frontend application for the Quixote AI Wrapper assessment. It provi
 - Backend API running on `http://localhost:3000`
 
 ### Setup
-1. Navigate to the frontend directory:
+1. Clone the repository and navigate to the folder:
    ```bash
-   cd d:\REPO\quixote_test_front
+   git clone https://github.com/rafavlack/quixote_test_front.git
+   cd quixote_test_front
    ```
 2. Install dependencies:
    ```bash
@@ -58,6 +59,9 @@ This is the frontend application for the Quixote AI Wrapper assessment. It provi
    npm run dev -- -p 3001
    ```
 5. Open [http://localhost:3001](http://localhost:3001) in your browser.
+6. Login using the default test account:
+   - **Email**: `test@quixote.com`
+   - **Password**: `Password123!`
 
 ## 📸 Integration Evidence
 
