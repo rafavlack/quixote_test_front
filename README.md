@@ -65,7 +65,19 @@ This is the frontend application for the Quixote AI Wrapper assessment. It provi
 
 ## 📸 Integration Evidence
 
-Screenshots and visual proofs can be found in the `assets/test-evidence` directory (in the main repository).
+Here are some screenshots demonstrating the frontend and backend integration:
+
+### 1. API Generation Test
+![API Generate](assets/test-evidence/api-generate.png)
+
+### 2. Usage Logs Display
+![Usage Logs](assets/test-evidence/usage-logs.png)
+
+### 3. Billing Information
+![Billing Info](assets/test-evidence/billing-info.png)
+
+### 4. Health Check
+![Health Check](assets/test-evidence/health-check.png)
 
 ---
 *Developed as part of the Quixote Full-Stack Technical Assessment.*
